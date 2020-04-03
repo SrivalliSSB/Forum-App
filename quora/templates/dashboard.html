@@ -1,0 +1,44 @@
+{% extends 'base1.html' %}
+{% block body %}
+<div class="container">
+        <h2 style="color: brown; text-align: center; font-weight: bolder;">DASHBOARD</h2>
+        
+        <p style="font-size: 20px;text-align: center;">This is an education forum where people ask questions publicly and get reply from other users.</p>
+        <div class="row">
+        <div class="col-md-6"> 
+            <div class="sub-head">
+                <h3 style="font-weight: bold;">All questions</h3>
+            </div>
+            <br>
+            {%for q in all_questions%}
+            <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ q.question }}</h5>
+                    <p class="card-text">Asked by: {{q.author}} | {{q.timestamp}}</p>
+                    <a href="/discussion/{{q.id}}/" class="btn btn-danger">ANSWER</a>
+
+                 </div>
+            </div> 
+            <br>
+			{% endfor %}  
+        </div>
+        <div class="col-md-6">
+            <div class="sub-head">
+                <h3  style="font-weight: bold;">All answers</h3>
+            </div>
+            <br>
+            {% for a in all_answers %}
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">{{ a.answer }}</h4>
+							<p class="card-text">Answered by {{ a.author }} | {{ a.timestamp }} | Upvotes: {{ a.upvotes }}</p>
+							<a href="/upvote/{{a.id}}/" class="btn btn-dark" style="font-size: 20px;">Upvote
+                                <i class="material-icons ">arrow_upward</i></a>
+						</div>
+					</div><br>
+				{% endfor %}
+			</div>
+        </div>
+    </div>
+
+{% endblock %}
