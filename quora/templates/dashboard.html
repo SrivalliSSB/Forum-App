@@ -36,11 +36,12 @@
                             <i class="material-icons ">arrow_upward</i></a>
                             
                             {% if a.author == user %}
-							<a style="border: 1px solid rgb(236, 229, 229); text-decoration: none;padding: 6px; color: red; margin-left: 10px;" href="/delete_answer/{{a.id}}/">Delete your answer</a>
+                            <a style="border: 1px solid rgb(236, 229, 229); text-decoration: none;padding: 6px; color: red; margin-left: 10px;" href="/delete_answer/{{a.id}}/">Delete your answer</a>
+                            
 							{% endif %}
 						</div>
 					</div><br>
-				{% endfor %}
+			{% endfor %}
 			</div>
         </div>
     </div>
