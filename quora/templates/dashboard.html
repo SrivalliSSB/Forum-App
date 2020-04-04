@@ -33,7 +33,7 @@
 							<h4 class="card-title">{{ a.answer }}</h4>
 							<p class="card-text">Answered by {{ a.author }} | {{ a.timestamp }} | Upvotes: {{ a.upvotes }}</p>
 							<a href="/upvote/{{a.id}}/" class="btn btn-dark" style="font-size: 20px;">Upvote
-                                <i class="material-icons ">arrow_upward</i></a>
+                            <i class="material-icons ">arrow_upward</i></a>
                             
                             {% if a.author == user %}
 							<a style="border: 1px solid rgb(236, 229, 229); text-decoration: none;padding: 6px; color: red; margin-left: 10px;" href="/delete_answer/{{a.id}}/">Delete your answer</a>

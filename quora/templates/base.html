@@ -16,7 +16,7 @@
         </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class='container'>
   <a class="navbar-brand" href="#">FORUM APP</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,8 +25,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
         
-    {% if user.is_authenticated %}
-    <li class="nav-item">
+      {% if user.is_authenticated %}
+      <li class="nav-item">
         <a class="nav-link" href="/signout/" >Logout</a>
       </li>
       {% else %}
@@ -40,7 +40,7 @@
     </ul>
   </div>
   </div>
-</nav>
+  </nav>
 <div>
     <div class="display">
         {% block signin %} {% endblock %}
